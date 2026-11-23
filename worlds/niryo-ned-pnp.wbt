@@ -1,0 +1,108 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/niryo/ned/protos/Ned.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/solids/protos/SolidBox.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.31277555898528364 0.34978044848165785 -0.8830770564120741 1.583309976333822
+  position -0.23491042923582514 1.9981809733274043 1.6753010560035488
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Ned {
+  controller "niryo_ned_pnp"
+  supervisor TRUE
+}
+DEF RED_BOX SolidBox {
+  translation 0.24 0 0.01
+  rotation 0 0 1 0
+  name "red_box"
+  size 0.02 0.02 0.02
+  appearance PBRAppearance {
+    baseColor 1 0 0
+    roughness 0.5
+    metalness 0
+    name "Appearance"
+  }
+  physics Physics {
+    density -1
+    mass 0.001
+  }
+}
+DEF RED_AREA SolidBox {
+  translation -0.24 0 0.0025
+  rotation 0 0 1 0
+  name "red_area"
+  size 0.1 0.1 0.005
+  appearance PBRAppearance {
+    baseColor 1 0 0
+    roughness 0.5
+    metalness 0
+    name "Appearance"
+  }
+}
+DEF GREEN_AREA SolidBox {
+  translation -0.24 0.14 0.0025
+  rotation 0 0 1 0
+  name "green_area"
+  size 0.1 0.1 0.005
+  appearance PBRAppearance {
+    baseColor 0 1 0
+    roughness 0.5
+    metalness 0
+    name "Appearance"
+  }
+}
+DEF BLUE_AREA SolidBox {
+  translation -0.24 -0.14 0.0025
+  rotation 0 0 1 0
+  name "blue_area"
+  size 0.1 0.1 0.005
+  appearance PBRAppearance {
+    baseColor 0 0 1
+    roughness 0.5
+    metalness 0
+    name "Appearance"
+  }
+}
+DEF GREEN_BOX SolidBox {
+  translation 0.24 0.1 0.01
+  rotation 0 0 1 0
+  name "green_box"
+  size 0.02 0.02 0.02
+  appearance PBRAppearance {
+    baseColor 0 1 0
+    roughness 0.5
+    metalness 0
+    name "Appearance"
+  }
+  physics Physics {
+    density -1
+    mass 0.001
+  }
+}
+DEF BLUE_BOX SolidBox {
+  translation 0.24 -0.1 0.01
+  rotation 0 0 1 0
+  name "blue_box"
+  size 0.02 0.02 0.02
+  appearance PBRAppearance {
+    baseColor 0 0 1
+    roughness 0.5
+    metalness 0
+    name "Appearance"
+  }
+  physics Physics {
+    density -1
+    mass 0.001
+  }
+}
