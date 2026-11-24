@@ -23,7 +23,7 @@ from ik_solver import NiryoNedIK
 # =============================================================================
 
 # Metode IK: "dls" (Damped Least Squares) atau "jacobian" (Moore-Penrose)
-METHOD = "dls"
+METHOD = "jacobian"
 
 # Posisi & rotasi base robot di World Webots (biarkan 0 jika robot di origin)
 ROBOT_BASE_POS = np.array([0.0, 0.0, 0.0], dtype=float)
@@ -59,6 +59,12 @@ TASKS = [
         "pick":  [0.24, -0.10, 0.019],
         "place": [-0.24, -0.14, 0.024],
     },
+    # {
+    #     "name": "White Box -> Blue Area",
+    #     "def_name": "WHITE_BOX",
+    #     "pick":  [0.15, 0.20, 0.019],
+    #     "place": [-0.24, -0.14, 0.04],
+    # },
 ]
 
 # Parameter motor, gripper, dan toleransi gerak

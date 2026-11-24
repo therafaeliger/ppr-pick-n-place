@@ -9,8 +9,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.31277555898528364 0.34978044848165785 -0.8830770564120741 1.583309976333822
-  position -0.23491042923582514 1.9981809733274043 1.6753010560035488
+  orientation 0.28600111577432025 0.34112115276316174 -0.8954550356736933 1.5050151921855321
+  position -0.273871336363662 2.120760527633436 1.5351933665493362
 }
 TexturedBackground {
 }
@@ -19,12 +19,27 @@ TexturedBackgroundLight {
 RectangleArena {
 }
 Ned {
+  hidden position_0_0 -3.4179184773654872e-09
+  hidden position_1_0 5.530430037259393e-07
+  hidden rotation_2 -2.7652159235285105e-07 -0.9999999999999234 2.7674170061540607e-07 1.5700000000000758
+  hidden position_2_0 5.043732376752708e-07
+  hidden rotation_3 0 0 1 5.040030039932671e-07
+  hidden position_3_0 7.987475069320315e-08
+  hidden rotation_4 -0.5775032594606561 -0.5775032133326963 -0.5770442131264539 2.093474953908761
+  hidden position_4_0 -2.5509801493406314e-09
+  hidden rotation_5 -0.00039799866146621117 -0.9999998415970528 0.0003979986614642566 1.5707959999989844
+  hidden position_5_0 1.459258380305812e-10
+  hidden rotation_6 1.459258857809355e-10 1 1.4604204126612843e-10 1.57
+  hidden position_7_0 5.4102178466408635e-11
+  hidden position_7_1 -4.956400394273697e-11
+  hidden translation_8 0.01455 -0.024400000000000217 0.009614000054102177
+  hidden translation_9 0.01455 -0.0244000000000002 -0.011065999950435996
   controller "niryo_ned_pnp"
   supervisor TRUE
 }
 DEF RED_BOX SolidBox {
-  translation 0.24 0 0.01
-  rotation 0 0 1 0
+  translation 0.24 -7.54305973279806e-18 0.009999607607000497
+  rotation 1.6186514875703584e-14 3.1473778924979192e-15 -1 1.0965529333380512e-16
   name "red_box"
   size 0.02 0.02 0.02
   appearance PBRAppearance {
@@ -40,7 +55,6 @@ DEF RED_BOX SolidBox {
 }
 DEF RED_AREA SolidBox {
   translation -0.24 0 0.0025
-  rotation 0 0 1 0
   name "red_area"
   size 0.1 0.1 0.005
   appearance PBRAppearance {
@@ -52,7 +66,6 @@ DEF RED_AREA SolidBox {
 }
 DEF GREEN_AREA SolidBox {
   translation -0.24 0.14 0.0025
-  rotation 0 0 1 0
   name "green_area"
   size 0.1 0.1 0.005
   appearance PBRAppearance {
@@ -64,7 +77,6 @@ DEF GREEN_AREA SolidBox {
 }
 DEF BLUE_AREA SolidBox {
   translation -0.24 -0.14 0.0025
-  rotation 0 0 1 0
   name "blue_area"
   size 0.1 0.1 0.005
   appearance PBRAppearance {
@@ -75,8 +87,8 @@ DEF BLUE_AREA SolidBox {
   }
 }
 DEF GREEN_BOX SolidBox {
-  translation 0.24 0.1 0.01
-  rotation 0 0 1 0
+  translation 0.24 0.1 0.009999607607000497
+  rotation -0.36049922396599976 -0.9012480599149987 -0.24040017474902722 2.887202014294085e-16
   name "green_box"
   size 0.02 0.02 0.02
   appearance PBRAppearance {
@@ -91,12 +103,27 @@ DEF GREEN_BOX SolidBox {
   }
 }
 DEF BLUE_BOX SolidBox {
-  translation 0.24 -0.1 0.01
-  rotation 0 0 1 0
+  translation 0.24 -0.1 0.009999607607000497
+  rotation -0.36049922396599976 -0.9012480599149987 -0.24040017474902722 2.887202014294085e-16
   name "blue_box"
   size 0.02 0.02 0.02
   appearance PBRAppearance {
     baseColor 0 0 1
+    roughness 0.5
+    metalness 0
+    name "Appearance"
+  }
+  physics Physics {
+    density -1
+    mass 0.001
+  }
+}
+DEF WHITE_BOX SolidBox {
+  translation 0.15 0.2 0.00999961
+  rotation 0.9720590720175811 -1.1511491872529957e-14 -0.23473636383892202 1.0707518869462879e-16
+  name "white_box"
+  size 0.02 0.02 0.02
+  appearance PBRAppearance {
     roughness 0.5
     metalness 0
     name "Appearance"
